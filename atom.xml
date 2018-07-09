@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-26T07:16:30.803Z</updated>
+  <updated>2018-07-09T08:12:04.025Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/06/26/Hexo%E4%B8%8EGitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2018/06/26/Hexo与GitHub搭建个人博客/</id>
     <published>2018-06-26T01:56:55.000Z</published>
-    <updated>2018-06-26T07:16:30.803Z</updated>
+    <updated>2018-07-09T08:12:04.025Z</updated>
     
     <content type="html"><![CDATA[<p>#一、 概述</p><h3 id="1-Hexo"><a href="#1-Hexo" class="headerlink" title="1.Hexo"></a>1.Hexo</h3><p>Hexo 是一个快速、简洁且高效的静态博客框架。</p><h3 id="2-Git与Github"><a href="#2-Git与Github" class="headerlink" title="2.Git与Github"></a>2.Git与Github</h3><p>Git是一种版本控制系统，Github是一个网站，给用户提供git服务，类似于百度云盘储存文件。</p><h3 id="3-相关软件"><a href="#3-相关软件" class="headerlink" title="3.相关软件"></a>3.相关软件</h3><p>  1.<a href="https://www.git-scm.com/download/" target="_blank" rel="noopener">Git</a></p><p>  2.<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">Node.js</a>基于 Chrome V8 引擎的 JavaScript 运行环境。 </p><p>  3.<a href="https://www.sublimetext.com/" target="_blank" rel="noopener">Sublime Text</a>编译器</p><p>#二、Github准备</p><pre><code>在[Github官网](https://github.com/)注册账号（建议使用谷歌浏览器，自带翻译功能），新建项目，项目名称：**Github账号名.github.io**</code></pre><p>#三、搭建工作</p><h3 id="1-检验Node是否安装。win-R-下进入-cmd-命令行窗口，输入命令："><a href="#1-检验Node是否安装。win-R-下进入-cmd-命令行窗口，输入命令：" class="headerlink" title="1.检验Node是否安装。win+R 下进入 cmd 命令行窗口，输入命令："></a>1.检验Node是否安装。win+R 下进入 cmd 命令行窗口，输入命令：</h3><pre><code>node -v</code></pre><h3 id="2-安装Hexo-，在-cmd-命令行窗口输入命令："><a href="#2-安装Hexo-，在-cmd-命令行窗口输入命令：" class="headerlink" title="2.安装Hexo ，在 cmd 命令行窗口输入命令："></a>2.安装Hexo ，在 cmd 命令行窗口输入命令：</h3><pre><code>npm install hexo-cli -g</code></pre><h3 id="3-在合适的盘中新建文件夹，右键点击-Git-Bash-Here-依次输入如下命令："><a href="#3-在合适的盘中新建文件夹，右键点击-Git-Bash-Here-依次输入如下命令：" class="headerlink" title="3.在合适的盘中新建文件夹，右键点击 Git Bash Here,依次输入如下命令："></a>3.在合适的盘中新建文件夹，右键点击 Git Bash Here,依次输入如下命令：</h3><pre><code>git config --global user.name &quot;Github账户名称&quot;git config --global user.email&quot;邮箱&quot;hexo inithexo installnpm install hexo-deployer-git --save</code></pre><h3 id="4-在-Github之前新建项目下，找到项目地址并复制："><a href="#4-在-Github之前新建项目下，找到项目地址并复制：" class="headerlink" title="4. 在 Github之前新建项目下，找到项目地址并复制："></a>4. 在 Github之前新建项目下，找到项目地址并复制：</h3><pre><code>https://github.com/Github账号名/Github账号名.github.io.git</code></pre><h3 id="5-打开Sublime-Text3编译器，将新建的博客文件夹鼠标拖入Sublime主页，打开左侧目录栏中-config-yml文件，修改文末deployment如下："><a href="#5-打开Sublime-Text3编译器，将新建的博客文件夹鼠标拖入Sublime主页，打开左侧目录栏中-config-yml文件，修改文末deployment如下：" class="headerlink" title="5.打开Sublime Text3编译器，将新建的博客文件夹鼠标拖入Sublime主页，打开左侧目录栏中_config.yml文件，修改文末deployment如下："></a>5.打开Sublime Text3编译器，将新建的博客文件夹鼠标拖入Sublime主页，打开左侧目录栏中_config.yml文件，修改文末deployment如下：</h3><pre><code>deploy：  type: git（注意冒号后有空格，正确颜色为：type红色，git黄色）  repo: https://github.com/cymj0612/cymj0612.github.io.git  branch: master一定要先保存！！！</code></pre><h3 id="6-在Git-窗口运行命令："><a href="#6-在Git-窗口运行命令：" class="headerlink" title="6.在Git 窗口运行命令："></a>6.在Git 窗口运行命令：</h3><pre><code>hexo g -d</code></pre><h3 id="7-检验Github新建项目中是否上传文件，然后复制该网页网址末端并搜索：账户名称-github-io，即可进入个人博客。"><a href="#7-检验Github新建项目中是否上传文件，然后复制该网页网址末端并搜索：账户名称-github-io，即可进入个人博客。" class="headerlink" title="7.检验Github新建项目中是否上传文件，然后复制该网页网址末端并搜索：账户名称.github.io，即可进入个人博客。"></a>7.检验Github新建项目中是否上传文件，然后复制该网页网址末端并搜索：账户名称.github.io，即可进入个人博客。</h3>]]></content>
     
