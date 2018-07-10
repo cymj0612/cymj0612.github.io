@@ -1979,7 +1979,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff3e2d;
+  background: #ff0aa3;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3169,4 +3169,14 @@ pre .javascript .function {
   .post-body {
     text-align: justify;
   }
+}
+body {
+  background: url("/images/backgroud.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.main-inner {
+  margin-top: -10px;
+  opacity: 0.6;
 }
