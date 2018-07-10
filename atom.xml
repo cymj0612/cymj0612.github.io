@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-10T09:55:34.394Z</updated>
+  <updated>2018-07-10T09:58:18.793Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/07/10/Next-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
     <id>http://yoursite.com/2018/07/10/Next-主题配置/</id>
     <published>2018-07-10T09:05:59.000Z</published>
-    <updated>2018-07-10T09:55:34.394Z</updated>
+    <updated>2018-07-10T09:58:18.793Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>个人博客搭建好之后，可以根据自己的喜好在<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo官网</a>上选择合适的博客主题，本文将介绍Next 主题。</p><h1 id="next下载及修改"><a href="#next下载及修改" class="headerlink" title="next下载及修改"></a>next下载及修改</h1><p>####1.主题下载，在Git 窗口输入命令行：</p><pre><code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code></pre><p>####2.通过博客的配置文件_config.yml进行主题修改<br>   在Sublime Text 编译器中打开_config.yml，搜索 theme:</p><pre><code>#Themes: https://hexo.io/themes/#theme: next </code></pre>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>个人博客搭建好之后，可以根据自己的喜好在<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo官网</a>上选择合适的博客主题，本文将介绍Next 主题。</p><h1 id="next下载及修改"><a href="#next下载及修改" class="headerlink" title="next下载及修改"></a>next下载及修改</h1><h3 id="1-主题下载，在Git-窗口输入命令行："><a href="#1-主题下载，在Git-窗口输入命令行：" class="headerlink" title="1.主题下载，在Git 窗口输入命令行："></a>1.主题下载，在Git 窗口输入命令行：</h3><pre><code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code></pre><h3 id="2-通过博客的配置文件-config-yml进行主题修改"><a href="#2-通过博客的配置文件-config-yml进行主题修改" class="headerlink" title="2.通过博客的配置文件_config.yml进行主题修改"></a>2.通过博客的配置文件_config.yml进行主题修改</h3><p>   在Sublime Text 编译器中打开_config.yml，搜索 theme:</p><pre><code>#Themes: https://hexo.io/themes/#theme: next </code></pre>]]></content>
     
     <summary type="html">
     
