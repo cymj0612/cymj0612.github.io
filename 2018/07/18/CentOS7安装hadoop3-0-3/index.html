@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hadoop," />
 
 
 
@@ -81,18 +81,19 @@
 
 
 
-<meta name="description" content="title: CentOS7下安装hadoop3.0.3date: 2018-07-18 21:20:24tags:—hadoop 在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。 一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：java -version rpm -qa | grep java  2">
+<meta name="description" content="在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。 一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：java -version rpm -qa | grep java  2.卸载openjdk：rpm -e --nodeps + 需要卸载的文件名（注意，noarch文件不必删除） 例如： rpm -e -">
+<meta name="keywords" content="hadoop">
 <meta property="og:type" content="article">
-<meta property="og:title" content="椘悆여자">
+<meta property="og:title" content="CentOS7下安装hadoop3.0.3">
 <meta property="og:url" content="http://yoursite.com/2018/07/18/CentOS7安装hadoop3-0-3/index.html">
 <meta property="og:site_name" content="椘悆여자">
-<meta property="og:description" content="title: CentOS7下安装hadoop3.0.3date: 2018-07-18 21:20:24tags:—hadoop 在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。 一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：java -version rpm -qa | grep java  2">
+<meta property="og:description" content="在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。 一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：java -version rpm -qa | grep java  2.卸载openjdk：rpm -e --nodeps + 需要卸载的文件名（注意，noarch文件不必删除） 例如： rpm -e -">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p5n3jfo7k.bkt.clouddn.com/201803162201_407.png">
-<meta property="og:updated_time" content="2018-07-18T14:03:06.267Z">
+<meta property="og:updated_time" content="2018-07-18T14:06:05.843Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="椘悆여자">
-<meta name="twitter:description" content="title: CentOS7下安装hadoop3.0.3date: 2018-07-18 21:20:24tags:—hadoop 在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。 一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：java -version rpm -qa | grep java  2">
+<meta name="twitter:title" content="CentOS7下安装hadoop3.0.3">
+<meta name="twitter:description" content="在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。 一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：java -version rpm -qa | grep java  2.卸载openjdk：rpm -e --nodeps + 需要卸载的文件名（注意，noarch文件不必删除） 例如： rpm -e -">
 <meta name="twitter:image" content="http://p5n3jfo7k.bkt.clouddn.com/201803162201_407.png">
 
 
@@ -129,7 +130,7 @@
 
 
 
-  <title> | 椘悆여자</title>
+  <title>CentOS7下安装hadoop3.0.3 | 椘悆여자</title>
   
 
 
@@ -327,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">CentOS7下安装hadoop3.0.3</h1>
         
 
         <div class="post-meta">
@@ -387,9 +388,7 @@
       
 
       
-        <hr>
-<p>title: CentOS7下安装hadoop3.0.3<br>date: 2018-07-18 21:20:24<br>tags:<br>—hadoop</p>
-<p>在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。</p>
+        <p>在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。</p>
 <h1 id="一、安装JDK"><a href="#一、安装JDK" class="headerlink" title="一、安装JDK"></a>一、安装JDK</h1><h3 id="1-centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行："><a href="#1-centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：" class="headerlink" title="1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行："></a>1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：</h3><pre><code>java -version
 rpm -qa | grep java
 </code></pre><p><img src="http://p5n3jfo7k.bkt.clouddn.com/201803162201_407.png" alt="avatar"></p>
@@ -457,6 +456,12 @@ su 用户名（即系统锁屏休眠的名字）（root切换至用户）
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hadoop/" rel="tag"># hadoop</a>
+          
+        </div>
       
 
       
@@ -587,7 +592,7 @@ su 用户名（即系统锁屏休眠的名字）（root切换至用户）
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>

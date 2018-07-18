@@ -324,7 +324,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/18/CentOS7安装hadoop3-0-3/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2018/07/18/CentOS7安装hadoop3-0-3/" itemprop="url">CentOS7下安装hadoop3.0.3</a></h1>
         
 
         <div class="post-meta">
@@ -386,10 +386,11 @@
       
         
           
-          
-title: CentOS7下安装hadoop3.0.3date: 2018-07-18 21:20:24tags:—hadoop
-在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。
-一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安
+          在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。
+一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：java -version
+rpm -qa | grep java
+
+2.卸载openjdk：rpm -e
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -772,7 +773,7 @@ next下载及修改1.主题下载，在Git 窗口输入命令行：git clone htt
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
