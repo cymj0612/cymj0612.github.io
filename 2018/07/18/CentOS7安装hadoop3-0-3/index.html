@@ -89,7 +89,7 @@
 <meta property="og:description" content="title: CentOS7安装hadoop3.0.3date: 2018-07-18 21:20:24tags:—hadoop 在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。 一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：java -version rpm -qa | grep java  2.">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p5n3jfo7k.bkt.clouddn.com/201803162201_407.png">
-<meta property="og:updated_time" content="2018-07-18T13:58:22.221Z">
+<meta property="og:updated_time" content="2018-07-18T14:00:26.439Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="椘悆여자">
 <meta name="twitter:description" content="title: CentOS7安装hadoop3.0.3date: 2018-07-18 21:20:24tags:—hadoop 在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。 一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：java -version rpm -qa | grep java  2.">
@@ -394,7 +394,12 @@
 rpm -qa | grep java
 </code></pre><p><img src="http://p5n3jfo7k.bkt.clouddn.com/201803162201_407.png" alt="avatar"></p>
 <h2 id="2-卸载openjdk："><a href="#2-卸载openjdk：" class="headerlink" title="2.卸载openjdk："></a>2.卸载openjdk：</h2><pre><code>rpm -e --nodeps + 需要卸载的文件名（注意，noarch文件不必删除）
-</code></pre><p>例如：<br>    rpm -e –nodeps java-1.7.0-openjdk-1.7.0.111-2.6.7.8.el7.x86_64<br>    rpm -e –nodeps java-1.8.0-openjdk-1.8.0.102-4.b14.el7.x86_64<br>    rpm -e –nodeps java-1.8.0-openjdk-headless-1.8.0.102-4.b14.el7.x86_64<br>    rpm -e –nodeps java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.8.el7.x86_64<br>执行完上述操作后，输入 java -version 查看是否卸载成功。</p>
+</code></pre><p>例如：</p>
+<pre><code>rpm -e --nodeps java-1.7.0-openjdk-1.7.0.111-2.6.7.8.el7.x86_64
+rpm -e --nodeps java-1.8.0-openjdk-1.8.0.102-4.b14.el7.x86_64
+rpm -e --nodeps java-1.8.0-openjdk-headless-1.8.0.102-4.b14.el7.x86_64
+rpm -e --nodeps java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.8.el7.x86_64
+</code></pre><p>执行完上述操作后，输入 java -version 查看是否卸载成功。</p>
 <h2 id="3-下载稳定版JDK文件，根据系统的版本选择合适的-tar-gz文件。在虚拟机home文件夹下新建文件hadoop，并将下载好的JDK文件放入hadoop文件夹中，解压："><a href="#3-下载稳定版JDK文件，根据系统的版本选择合适的-tar-gz文件。在虚拟机home文件夹下新建文件hadoop，并将下载好的JDK文件放入hadoop文件夹中，解压：" class="headerlink" title="3.下载稳定版JDK文件，根据系统的版本选择合适的.tar.gz文件。在虚拟机home文件夹下新建文件hadoop，并将下载好的JDK文件放入hadoop文件夹中，解压："></a>3.下载<a href="https://blog.csdn.net/qq_25881261/article/details/79698252" target="_blank" rel="noopener">稳定版JDK</a>文件，根据系统的版本选择合适的.tar.gz文件。在虚拟机home文件夹下新建文件hadoop，并将下载好的JDK文件放入hadoop文件夹中，解压：</h2><pre><code>tar -zxvf jdk-linux-x64.tar.gz(此处为你自己下载的版本)
 </code></pre><h2 id="4-安装完成后，配置环境变量，编辑-etc-profile文件："><a href="#4-安装完成后，配置环境变量，编辑-etc-profile文件：" class="headerlink" title="4.安装完成后，配置环境变量，编辑/etc/profile文件："></a>4.安装完成后，配置环境变量，编辑/etc/profile文件：</h2><pre><code>vi /etc/profile/
 </code></pre><p>按 i 进入文件插入模式，在文末最后空白处添加：</p>
@@ -402,8 +407,10 @@ rpm -qa | grep java
 export JAVA_HOME=/usr/java/jdk1.8.0_144（此处为jdk路径）
 export CLASSPATH=.:${JAVA_HOME}/jre/lib/rt.jar:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
 export PATH=$PATH:${JAVA_HOME}/bin
-</code></pre><p>按 esc 键退出编辑模式，：wq 保存并退出文件。<br>    source /etc/profile （让设置的环境变量生效）<br>    oche $JAVA_HOME （查看jdk安装路径是否保存）</p>
-<h2 id="5-检查是否成功安装："><a href="#5-检查是否成功安装：" class="headerlink" title="5.检查是否成功安装："></a>5.检查是否成功安装：</h2><pre><code>java -version
+</code></pre><p>按 esc 键退出编辑模式，：wq 保存并退出文件。</p>
+<pre><code>source /etc/profile （让设置的环境变量生效）
+oche $JAVA_HOME （查看jdk安装路径是否保存）
+</code></pre><h2 id="5-检查是否成功安装："><a href="#5-检查是否成功安装：" class="headerlink" title="5.检查是否成功安装："></a>5.检查是否成功安装：</h2><pre><code>java -version
 </code></pre><h2 id="6-补充："><a href="#6-补充：" class="headerlink" title="6.补充："></a>6.补充：</h2><p> 终端命令行输入是用户身份还是root身份，视情况而定，建议涉及到文件编辑等，以用户身份，如果提示权限要求，则以root 身份。<br>用户身份与root身份切换：</p>
 <pre><code>su root(用户切换至root)
 su 用户名（即系统锁屏休眠的名字）（root切换至用户）
