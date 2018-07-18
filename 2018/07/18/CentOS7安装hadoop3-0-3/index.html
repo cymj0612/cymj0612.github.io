@@ -81,13 +81,19 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="title: CentOS7安装hadoop3.0.3date: 2018-07-18 21:20:24tags:—hadoop 在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。 一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：java -version rpm -qa | grep java  2.">
+<meta property="og:type" content="article">
 <meta property="og:title" content="椘悆여자">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/07/18/CentOS7安装hadoop3-0-3/index.html">
 <meta property="og:site_name" content="椘悆여자">
+<meta property="og:description" content="title: CentOS7安装hadoop3.0.3date: 2018-07-18 21:20:24tags:—hadoop 在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。 一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：java -version rpm -qa | grep java  2.">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p5n3jfo7k.bkt.clouddn.com/201803162201_407.png">
+<meta property="og:updated_time" content="2018-07-18T13:58:22.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="椘悆여자">
+<meta name="twitter:description" content="title: CentOS7安装hadoop3.0.3date: 2018-07-18 21:20:24tags:—hadoop 在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。 一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：java -version rpm -qa | grep java  2.">
+<meta name="twitter:image" content="http://p5n3jfo7k.bkt.clouddn.com/201803162201_407.png">
 
 
 
@@ -117,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/18/CentOS7安装hadoop3-0-3/"/>
 
 
 
 
 
-  <title>椘悆여자</title>
+  <title> | 椘悆여자</title>
   
 
 
@@ -142,8 +148,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -290,9 +295,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -322,9 +327,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/18/CentOS7安装hadoop3-0-3/" itemprop="url">未命名</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -384,21 +387,27 @@
       
 
       
-        
-          
-          
-title: CentOS7安装hadoop3.0.3date: 2018-07-18 21:20:24tags:—hadoop
-在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。
-一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/18/CentOS7安装hadoop3-0-3/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <hr>
+<p>title: CentOS7安装hadoop3.0.3<br>date: 2018-07-18 21:20:24<br>tags:<br>—hadoop</p>
+<p>在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。</p>
+<h1 id="一、安装JDK"><a href="#一、安装JDK" class="headerlink" title="一、安装JDK"></a>一、安装JDK</h1><h2 id="1-centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行："><a href="#1-centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：" class="headerlink" title="1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行："></a>1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：</h2><pre><code>java -version
+rpm -qa | grep java
+</code></pre><p><img src="http://p5n3jfo7k.bkt.clouddn.com/201803162201_407.png" alt="avatar"></p>
+<h2 id="2-卸载openjdk："><a href="#2-卸载openjdk：" class="headerlink" title="2.卸载openjdk："></a>2.卸载openjdk：</h2><pre><code>rpm -e --nodeps + 需要卸载的文件名（注意，noarch文件不必删除）
+</code></pre><p>例如：<br>    rpm -e –nodeps java-1.7.0-openjdk-1.7.0.111-2.6.7.8.el7.x86_64<br>    rpm -e –nodeps java-1.8.0-openjdk-1.8.0.102-4.b14.el7.x86_64<br>    rpm -e –nodeps java-1.8.0-openjdk-headless-1.8.0.102-4.b14.el7.x86_64<br>    rpm -e –nodeps java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.8.el7.x86_64<br>执行完上述操作后，输入 java -version 查看是否卸载成功。</p>
+<h2 id="3-下载稳定版JDK文件，根据系统的版本选择合适的-tar-gz文件。在虚拟机home文件夹下新建文件hadoop，并将下载好的JDK文件放入hadoop文件夹中，解压："><a href="#3-下载稳定版JDK文件，根据系统的版本选择合适的-tar-gz文件。在虚拟机home文件夹下新建文件hadoop，并将下载好的JDK文件放入hadoop文件夹中，解压：" class="headerlink" title="3.下载稳定版JDK文件，根据系统的版本选择合适的.tar.gz文件。在虚拟机home文件夹下新建文件hadoop，并将下载好的JDK文件放入hadoop文件夹中，解压："></a>3.下载<a href="https://blog.csdn.net/qq_25881261/article/details/79698252" target="_blank" rel="noopener">稳定版JDK</a>文件，根据系统的版本选择合适的.tar.gz文件。在虚拟机home文件夹下新建文件hadoop，并将下载好的JDK文件放入hadoop文件夹中，解压：</h2><pre><code>tar -zxvf jdk-linux-x64.tar.gz(此处为你自己下载的版本)
+</code></pre><h2 id="4-安装完成后，配置环境变量，编辑-etc-profile文件："><a href="#4-安装完成后，配置环境变量，编辑-etc-profile文件：" class="headerlink" title="4.安装完成后，配置环境变量，编辑/etc/profile文件："></a>4.安装完成后，配置环境变量，编辑/etc/profile文件：</h2><pre><code>vi /etc/profile/
+</code></pre><p>按 i 进入文件插入模式，在文末最后空白处添加：</p>
+<pre><code>#java environment
+export JAVA_HOME=/usr/java/jdk1.8.0_144（此处为jdk路径）
+export CLASSPATH=.:${JAVA_HOME}/jre/lib/rt.jar:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
+export PATH=$PATH:${JAVA_HOME}/bin
+</code></pre><p>按 esc 键退出编辑模式，：wq 保存并退出文件。<br>    source /etc/profile （让设置的环境变量生效）<br>    oche $JAVA_HOME （查看jdk安装路径是否保存）</p>
+<h2 id="5-检查是否成功安装："><a href="#5-检查是否成功安装：" class="headerlink" title="5.检查是否成功安装："></a>5.检查是否成功安装：</h2><pre><code>java -version
+</code></pre><h2 id="6-补充："><a href="#6-补充：" class="headerlink" title="6.补充："></a>6.补充：</h2><p> 终端命令行输入是用户身份还是root身份，视情况而定，建议涉及到文件编辑等，以用户身份，如果提示权限要求，则以root 身份。<br>用户身份与root身份切换：</p>
+<pre><code>su root(用户切换至root)
+su 用户名（即系统锁屏休眠的名字）（root切换至用户）
+</code></pre>
       
     </div>
     
@@ -408,6 +417,35 @@ title: CentOS7安装hadoop3.0.3date: 2018-07-18 21:20:24tags:—hadoop
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="只愿有你的芳华 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="只愿有你的芳华 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
@@ -415,290 +453,43 @@ title: CentOS7安装hadoop3.0.3date: 2018-07-18 21:20:24tags:—hadoop
       
 
       
-
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/10/Next-主题配置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="只愿有你的芳华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar_m.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="椘悆여자">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/10/Next-主题配置/" itemprop="url">Next 主题配置</a></h1>
+        <div class="post-widgets">
         
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-10T17:05:59+08:00">
-                2018-07-10
-              </time>
-            
+        
 
-            
-
-            
-          </span>
-
+        
           
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/07/10/Next-主题配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/10/Next-主题配置/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
       
 
       
-        
-          
-          前言个人博客搭建好之后，可以根据自己的喜好在Hexo官网上选择合适的博客主题，本文将介绍Next 主题。
-next下载及修改1.主题下载，在Git 窗口输入命令行：git clone https://github.com/iissnan/hexo-theme-next themes/next
-2.通
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/10/Next-主题配置/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/10/Next-主题配置/" rel="next" title="Next 主题配置">
+                <i class="fa fa-chevron-left"></i> Next 主题配置
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/26/Hexo与GitHub搭建个人博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="只愿有你的芳华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar_m.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="椘悆여자">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/26/Hexo与GitHub搭建个人博客/" itemprop="url">Hexo与GitHub搭建个人博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-26T09:56:55+08:00">
-                2018-06-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/06/26/Hexo与GitHub搭建个人博客/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/06/26/Hexo与GitHub搭建个人博客/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          #一、 概述
-1.HexoHexo 是一个快速、简洁且高效的静态博客框架。
-2.Git与GithubGit是一种版本控制系统，Github是一个网站，给用户提供git服务，类似于百度云盘储存文件。
-3.相关软件  1.Git
-  2.Node.js基于 Chrome V8 引擎的 JavaScrip
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/26/Hexo与GitHub搭建个人博客/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -708,10 +499,11 @@ next下载及修改1.主题下载，在Git 窗口输入命令行：git clone htt
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -719,6 +511,13 @@ next下载及修改1.主题下载，在Git 窗口输入命令行：git clone htt
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -739,8 +538,17 @@ next下载及修改1.主题下载，在Git 窗口输入命令行：git clone htt
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -830,6 +638,22 @@ next下载及修改1.主题下载，在Git 窗口输入命令行：git clone htt
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、安装JDK"><span class="nav-number">1.</span> <span class="nav-text">一、安装JDK</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行："><span class="nav-number">1.1.</span> <span class="nav-text">1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-卸载openjdk："><span class="nav-number">1.2.</span> <span class="nav-text">2.卸载openjdk：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-下载稳定版JDK文件，根据系统的版本选择合适的-tar-gz文件。在虚拟机home文件夹下新建文件hadoop，并将下载好的JDK文件放入hadoop文件夹中，解压："><span class="nav-number">1.3.</span> <span class="nav-text">3.下载稳定版JDK文件，根据系统的版本选择合适的.tar.gz文件。在虚拟机home文件夹下新建文件hadoop，并将下载好的JDK文件放入hadoop文件夹中，解压：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-安装完成后，配置环境变量，编辑-etc-profile文件："><span class="nav-number">1.4.</span> <span class="nav-text">4.安装完成后，配置环境变量，编辑/etc/profile文件：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-检查是否成功安装："><span class="nav-number">1.5.</span> <span class="nav-text">5.检查是否成功安装：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-补充："><span class="nav-number">1.6.</span> <span class="nav-text">6.补充：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -983,6 +807,10 @@ next下载及修改1.主题下载，在Git 窗口输入命令行：git clone htt
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
