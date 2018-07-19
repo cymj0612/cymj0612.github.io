@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://p5n3jfo7k.bkt.clouddn.com/201803172232_19.png">
 <meta property="og:image" content="http://p5n3jfo7k.bkt.clouddn.com/201803181614_414.png">
 <meta property="og:image" content="http://p5n3jfo7k.bkt.clouddn.com/201803181622_20.png">
-<meta property="og:updated_time" content="2018-07-19T03:00:50.936Z">
+<meta property="og:updated_time" content="2018-07-19T03:06:32.690Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS7下安装hadoop3.0.3">
 <meta name="twitter:description" content="在安装hadoop之前，请自行学习安装虚拟机以及CentOS7系统。 一、安装JDK1.centos下默认安装openjdk，需要先卸载。检查是否含有openjdk安装包，在终端窗口输入命令行：java -version rpm -qa | grep java  2.卸载openjdk：rpm -e --nodeps + 需要卸载的文件名（注意，noarch文件不必删除） 例如： rpm -e -">
@@ -417,15 +417,15 @@ oche $JAVA_HOME （查看jdk安装路径是否保存）
 <pre><code>su root(用户切换至root)
 su 用户名（即系统锁屏休眠的名字）（root切换至用户）
 </code></pre><h1 id="二、SSH免密设置"><a href="#二、SSH免密设置" class="headerlink" title="二、SSH免密设置"></a>二、SSH免密设置</h1><h2 id="1-切换至root-身份，测试是否能免密登录："><a href="#1-切换至root-身份，测试是否能免密登录：" class="headerlink" title="1.切换至root 身份，测试是否能免密登录："></a>1.切换至root 身份，测试是否能免密登录：</h2><pre><code>ssh localhost
-</code></pre><h2 id="2-生成密钥："><a href="#2-生成密钥：" class="headerlink" title="2.生成密钥："></a>2.生成密钥：</h2><pre><code>ssh-keygen -t rsa    根据提示操作，但凡有输入全部回车
-</code></pre><h2 id="3-将密钥复制到目标服务器，即终端命令行前的root-目标服务器："><a href="#3-将密钥复制到目标服务器，即终端命令行前的root-目标服务器：" class="headerlink" title="3.将密钥复制到目标服务器，即终端命令行前的root@目标服务器："></a>3.将密钥复制到目标服务器，即终端命令行前的root@目标服务器：</h2><pre><code>ssh-copy-ip 目标服务器
-</code></pre><h2 id="4-测试，不报错，也不需要输入密码："><a href="#4-测试，不报错，也不需要输入密码：" class="headerlink" title="4.测试，不报错，也不需要输入密码："></a>4.测试，不报错，也不需要输入密码：</h2><pre><code>ssh 目标服务器
+</code></pre><h2 id="2-生成密钥："><a href="#2-生成密钥：" class="headerlink" title="2.生成密钥："></a>2.生成密钥：</h2><pre><code>ssh-keygen -t rsa    (根据提示操作，但凡有输入，全部回车键)
+</code></pre><h2 id="3-将密钥复制到目标服务器，即终端命令行前的root-目标服务器："><a href="#3-将密钥复制到目标服务器，即终端命令行前的root-目标服务器：" class="headerlink" title="3.将密钥复制到目标服务器，即终端命令行前的root@目标服务器："></a>3.将密钥复制到目标服务器，即终端命令行前的root@目标服务器：</h2><pre><code>ssh-copy-ip +目标服务器  （例如： ssh-copy-ip xt）
+</code></pre><h2 id="4-测试，不报错，也不需要输入密码："><a href="#4-测试，不报错，也不需要输入密码：" class="headerlink" title="4.测试，不报错，也不需要输入密码："></a>4.测试，不报错，也不需要输入密码：</h2><pre><code>ssh +目标服务器  
 #Last login:Thu Jul 19 09:34:27 2018(运行结果)
 </code></pre><p> 如此就配置好了。</p>
 <h1 id="三、安装Hadoop"><a href="#三、安装Hadoop" class="headerlink" title="三、安装Hadoop"></a>三、安装Hadoop</h1><h2 id="1-在hadoop官网选择版本并下载，即Tarball下binary里，选择HTTP最后一个镜像文件（-tar-gz）-并放至hadoop文件夹中，切换至用户身份解压："><a href="#1-在hadoop官网选择版本并下载，即Tarball下binary里，选择HTTP最后一个镜像文件（-tar-gz）-并放至hadoop文件夹中，切换至用户身份解压：" class="headerlink" title="1.在hadoop官网选择版本并下载，即Tarball下binary里，选择HTTP最后一个镜像文件（.tar.gz）,并放至hadoop文件夹中，切换至用户身份解压："></a>1.在<a href="http://hadoop.apache.org/releases.html" target="_blank" rel="noopener">hadoop官网</a>选择版本并下载，即Tarball下binary里，选择HTTP最后一个镜像文件（.tar.gz）,并放至hadoop文件夹中，切换至用户身份解压：</h2><pre><code>tar -zxvf hadoop-3.0.3.tar.gz(对应的版本)
 </code></pre><h2 id="2-检查hadoop是否成功安装："><a href="#2-检查hadoop是否成功安装：" class="headerlink" title="2.检查hadoop是否成功安装："></a>2.检查hadoop是否成功安装：</h2><pre><code>cd /home/admin/hadoop/hadoop-3.0.3/bin/(进入hadoop安装目录,即解压路径)
 hadoop version
-</code></pre><p>   <img src="http://p5n3jfo7k.bkt.clouddn.com/201803172232_19.png" alt="pic"></p>
+</code></pre><p><img src="http://p5n3jfo7k.bkt.clouddn.com/201803172232_19.png" alt="pic"></p>
 <p>此时，表明已经成功安装hadoop，如果不是，重启系统。</p>
 <h2 id="3-hadoop环境配置"><a href="#3-hadoop环境配置" class="headerlink" title="3.hadoop环境配置"></a>3.hadoop环境配置</h2><pre><code>vi /etc/profile/
 </code></pre><p>按 i 进入文件插入模式，在文末最后空白处添加：</p>
@@ -440,15 +440,53 @@ vi hadoop-env.sh  (添加JAVA_HOME路径：JAVA_HOME=/usr/java/jdk1.8.0_144)
 vi yarn-env.sh  (同上)
 </code></pre><h1 id="四、搭建hadoop伪分布模式"><a href="#四、搭建hadoop伪分布模式" class="headerlink" title="四、搭建hadoop伪分布模式"></a>四、搭建hadoop伪分布模式</h1><h2 id="1-进入文件配置目录："><a href="#1-进入文件配置目录：" class="headerlink" title="1.进入文件配置目录："></a>1.进入文件配置目录：</h2><pre><code>cd /home/admin/hadoop/hadoop-3.0.3/etc/hadoop/
 ls
-</code></pre><h2 id="2-配置core-site-xml文件："><a href="#2-配置core-site-xml文件：" class="headerlink" title="2.配置core-site.xml文件："></a>2.配置core-site.xml文件：</h2><p>在hadoop-3.0.3目录下，创建文件夹tmp：<br>    mkdir tmp<br>    pwd  (获取tmp的路径，后面配置tmp)<br>    vi core-site.xml</p>
-<p>// 在<configuration> 标签里面加上以下代码<br>    <!--配置HDFS的NameNode--><br>    <property><br>        <name>fs.defaultFS</name><br>        <value>hdfs://localhost：9000</value><br>    </property><br>    <!--配置DataNode保存数据的位置--><br>    <property><br>        <name>hadoop.tmp.dir</name><br>        <value>/home/admin/hadoop/hadoop-3.0.3/tmp</value><br>    </property></configuration></p>
-<h2 id="3-配置hdfs-site-xml-文件："><a href="#3-配置hdfs-site-xml-文件：" class="headerlink" title="3.配置hdfs-site.xml 文件："></a>3.配置hdfs-site.xml 文件：</h2><pre><code>vi hdfs-site.xml
-</code></pre><p>// 在<configuration> 标签里面加上以下代码<br>    <!--配置HDFS的冗余度--><br>    <property><br>        <name>dfs.replication</name><br>        <value>1</value><br>    </property><br>    <!--配置是否检查权限--><br>    <property><br>        <name>dfs.permissions</name><br>        <value>false</value><br>    </property> </configuration></p>
-<h2 id="4-配置-mapred-site-xml文件："><a href="#4-配置-mapred-site-xml文件：" class="headerlink" title="4.配置 mapred-site.xml文件："></a>4.配置 mapred-site.xml文件：</h2><pre><code>vi mapred-site.xml
-</code></pre><p>// 在<configuration> 标签里面加上以下代码<br>    <!--配置MapReduce的框架--><br>    <property><br>         <name>mapreduce.framework.name</name><br>         <value>yarn</value><br>    </property></configuration></p>
-<h2 id="5-配置-yarn-site-xml-文件："><a href="#5-配置-yarn-site-xml-文件：" class="headerlink" title="5.配置 yarn-site.xml 文件："></a>5.配置 yarn-site.xml 文件：</h2><pre><code>vi yarn-site.xml
-</code></pre><p>// 在<configuration> 标签里面加上以下代码<br>    <!--配置主节点ResourceManager的地址--><br>    <property><br>        <name>yarn.resourcemanager.hostname</name><br>        <value>localhost</value><br>    </property><br>    <!--配置节点NodeManager执行任务的方式--><br>    <property><br>        <name>yarn.nodemanager.aux-services</name><br>        <value>mapreduce_shuffle</value><br>    </property></configuration></p>
-<h2 id="6-切换至root身份，格式化NameNode"><a href="#6-切换至root身份，格式化NameNode" class="headerlink" title="6.切换至root身份，格式化NameNode:"></a>6.切换至root身份，格式化NameNode:</h2><pre><code>cd /home/admin/hadoop/hadoop-3.0.3/bin/
+</code></pre><h2 id="2-配置core-site-xml文件："><a href="#2-配置core-site-xml文件：" class="headerlink" title="2.配置core-site.xml文件："></a>2.配置core-site.xml文件：</h2><p>在hadoop-3.0.3目录下，创建文件夹tmp：</p>
+<pre><code>mkdir tmp
+pwd     (获取tmp的路径，后面配置tmp)
+vi core-site.xml
+</code></pre><p>// 在<configuration> 标签里面加上以下代码</configuration></p>
+<pre><code>&lt;!--配置HDFS的NameNode--&gt;  
+&lt;property&gt;
+    &lt;name&gt;fs.defaultFS&lt;/name&gt;
+    &lt;value&gt;hdfs://localhost：9000&lt;/value&gt; 
+&lt;/property&gt;
+&lt;!--配置DataNode保存数据的位置--&gt;
+&lt;property&gt;
+    &lt;name&gt;hadoop.tmp.dir&lt;/name&gt; 
+    &lt;value&gt;/home/admin/hadoop/hadoop-3.0.3/tmp&lt;/value&gt; 
+&lt;/property&gt;
+</code></pre><h2 id="3-配置hdfs-site-xml-文件："><a href="#3-配置hdfs-site-xml-文件：" class="headerlink" title="3.配置hdfs-site.xml 文件："></a>3.配置hdfs-site.xml 文件：</h2><pre><code>vi hdfs-site.xml
+</code></pre><p>// 在<configuration> 标签里面加上以下代码</configuration></p>
+<pre><code>&lt;!--配置HDFS的冗余度--&gt;
+&lt;property&gt;
+    &lt;name&gt;dfs.replication&lt;/name&gt; 
+    &lt;value&gt;1&lt;/value&gt; 
+&lt;/property&gt;  
+&lt;!--配置是否检查权限--&gt;
+&lt;property&gt;
+    &lt;name&gt;dfs.permissions&lt;/name&gt; 
+    &lt;value&gt;false&lt;/value&gt; 
+&lt;/property&gt; 
+</code></pre><h2 id="4-配置-mapred-site-xml文件："><a href="#4-配置-mapred-site-xml文件：" class="headerlink" title="4.配置 mapred-site.xml文件："></a>4.配置 mapred-site.xml文件：</h2><pre><code>vi mapred-site.xml
+</code></pre><p>// 在<configuration> 标签里面加上以下代码</configuration></p>
+<pre><code>&lt;!--配置MapReduce的框架--&gt;
+&lt;property&gt;
+     &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
+     &lt;value&gt;yarn&lt;/value&gt;
+&lt;/property&gt;
+</code></pre><h2 id="5-配置-yarn-site-xml-文件："><a href="#5-配置-yarn-site-xml-文件：" class="headerlink" title="5.配置 yarn-site.xml 文件："></a>5.配置 yarn-site.xml 文件：</h2><pre><code>vi yarn-site.xml
+</code></pre><p>// 在<configuration> 标签里面加上以下代码</configuration></p>
+<pre><code>&lt;!--配置主节点ResourceManager的地址--&gt;
+&lt;property&gt;
+    &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;
+    &lt;value&gt;localhost&lt;/value&gt;
+&lt;/property&gt;
+&lt;!--配置节点NodeManager执行任务的方式--&gt;
+&lt;property&gt;
+    &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+    &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+&lt;/property&gt;
+</code></pre><h2 id="6-切换至root身份，格式化NameNode"><a href="#6-切换至root身份，格式化NameNode" class="headerlink" title="6.切换至root身份，格式化NameNode:"></a>6.切换至root身份，格式化NameNode:</h2><pre><code>cd /home/admin/hadoop/hadoop-3.0.3/bin/
 hdfs namenode -format
 </code></pre><p>成功的话，会看到 “successfully formatted” 和 “Exitting with status 0” 的提示，若为 “Exitting with status 1” 则是出错　</p>
 <h2 id="7-启动hadoop："><a href="#7-启动hadoop：" class="headerlink" title="7.启动hadoop："></a>7.启动hadoop：</h2><pre><code>cd /home/admin/hadoop/hadoop-3.0.3/
